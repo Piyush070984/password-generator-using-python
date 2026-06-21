@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Piyush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <nav class="tabs" aria-label="Project tabs">
+      <button class="tab active" data-tab="password" aria-selected="true">🔐 Password Generator</button>
+      <button class="tab" data-tab="file-organizer" aria-selected="false">📁 File Organizer</button>
+    </nav>
+
+    <section id="password" class="tab-panel active" role="tabpanel">
+      <h1>🔐 Password Generator</h1>
+      <p class="subtitle">Generate secure, customizable passwords instantly.</p>
+
+      <section class="card">
+        <label for="length">Password Length</label>
+        <input id="length" type="number" min="1" max="128" value="12" />
+
+        <div class="options">
+          <label><input type="checkbox" id="uppercase" /> Include Uppercase (A-Z)</label>
+          <label><input type="checkbox" id="digits" /> Include Digits (0-9)</label>
+          <label><input type="checkbox" id="symbols" /> Include Symbols (!@#$...)</label>
+        </div>
+
+        <button id="generateBtn">Generate Password</button>
+
+        <div class="output-wrap">
+          <input id="output" type="text" readonly placeholder="Your password will appear here" />
+          <button id="copyBtn">Copy</button>
+        </div>
+
+        <p id="message" class="message"></p>
+      </section>
+    </section>
+
+    <section id="file-organizer" class="tab-panel" role="tabpanel" aria-hidden="true">
+      <h1>📁 File Organizer</h1>
+      <p class="subtitle">A Python program that automatically organizes files into folders by type.</p>
+
+      <section class="card">
+        <h2>About this project</h2>
+        <p>
+          This project scans a chosen directory and sorts files into categorized folders
+          (for example: Images, Documents, Videos, Audio, Archives, and more).
+        </p>
+
+        <h3>Key features</h3>
+        <ul class="feature-list">
+          <li>Automatic file grouping by extension/type</li>
+          <li>Clean and simple Python-based logic</li>
+          <li>Helps keep folders structured and clutter-free</li>
+        </ul>
+
+        <a class="repo-link" href="https://github.com/Piyush070984/File-Organizer" target="_blank" rel="noopener noreferrer">
+          View File Organizer Repository ↗
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
